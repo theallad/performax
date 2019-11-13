@@ -4,13 +4,7 @@
 
 * Admin : [network-console.theallad.co.kr](http://network-console.theallad.co.kr)
 
-ID : sjjeon@allad.fun
-PW : allad!
-
 * Guide : [http://wiki.performax.co.kr](http://wiki.performax.co.kr)
-
-ID : allad01
-PW : allad123
 
 
 
@@ -27,9 +21,6 @@ PW : allad123
 ### Appsflyer
 
 * Dashboard :  [https://hq1.appsflyer.com/auth/login](https://hq1.appsflyer.com/auth/login)
-
-ID : 
-PW : 
 
 * Test Link : [https://app.appsflyer.com/com.appsflyer.adNetworkTest?af_siteid={affiliate_id}&af_sub_siteid={source}&af_c_id={offer_id}&af_sub1={aff_sub}&af_sub2={aff_sub2}&af_sub3={aff_sub3}&af_sub4={aff_sub4}&af_sub5={aff_sub5}&pid=alladfun_int&af_click_lookback=7d&clickid={transaction_id}](https://app.appsflyer.com/com.appsflyer.adNetworkTest?af_siteid={affiliate_id}&af_sub_siteid={source}&af_c_id={offer_id}&af_sub1={aff_sub}&af_sub2={aff_sub2}&af_sub3={aff_sub3}&af_sub4={aff_sub4}&af_sub5={aff_sub5}&pid=alladfun_int&af_click_lookback=7d&clickid={transaction_id})
 

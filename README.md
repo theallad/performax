@@ -1,4 +1,4 @@
-## Performax CPI
+## Performax
 
 ##### Admin & Guide
 

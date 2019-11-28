@@ -100,5 +100,52 @@ http://network-tracking.theallad.co.kr/aff_goal?a=lsr&goal_id=(event-name)&trans
 * [https://support.appsflyer.com/hc/en-us/articles/207273946-Postback-macros-for-Ad-Networks](https://support.appsflyer.com/hc/en-us/articles/207273946-Postback-macros-for-Ad-Networks)
 
 
+### Adbrix
 
+##### 1. Attribution Postback
+
+```
+http://network-tracking.theallad.co.kr/aff_lsr?transaction_id={cb_1}&google_aid={req.common.identity.adid}&ios_ifa={req.common.identity.adid}&conv_ip={a_ip}&mobile_carrier={req.common.device_info.carrier}&device_os_version={req.common.device_info.os}&device_brand={req.common.device_info.vendor}&device_model={req.common.device_info.model}&adv_sub2={cb_2}&adv_sub3={cb_3}&adv_sub4={cb_4}&adv_sub5={cb_5}
+```
+| Performax Parameters | Description           | Adbrix Macros                    |
+| -------------------- | --------------------- | -------------------------------- |
+| transaction_id       | 고유 클릭 ID          | {cb_1}                           |
+| google_aid           | ADID                  | {req.common.identity.adid}       |
+| ios_ifa              | IDFA                  | {req.common.identity.adid}       |
+| conv_ip              | 전환이 발생한 기기 IP | {a_ip}                           |
+| mobile_carrier       | 통신사                | {req.common.device_info.carrier} |
+| device_os_version    | 기기 OS 버전          | {req.common.device_info.os}      |
+| device_brand         | 기기 제조사           | {req.common.device_info.vendor}  |
+| device_model         | 기기 모델명           | {req.common.device_info.model}   |
+| adv_sub2             | 추가 파라미터         | {cb_2}                           |
+| adv_sub3             | 추가 파라미터         | {cb_3}                           |
+| adv_sub4             | 추가 파라미터         | {cb_4}                           |
+| adv_sub5             | 추가 파라미터         | {cb_5}                           |
+
+##### 2. Event Postback
+
+```
+http://network-tracking.theallad.co.kr/aff_goal?a=lsr&goal_id={req.evt.event_name}&transaction_id={last.cb_1}&google_aid={req.common.identity.adid}&ios_ifa={req.common.identity.adid}&conv_ip={last.a_ip}&mobile_carrier={req.common.device_info.carrier}&device_os_version={req.common.device_info.os}&device_brand={req.common.device_info.vendor}&device_model={req.common.device_info.model}&conversion_event_datetime={req.evt.event_timestamp}&adv_sub2={last.cb_2}&adv_sub3={last.cb_3}&adv_sub4={last.cb_4}&adv_sub5={last.cb_5}
+```
+
+| Performax Parameters      | Description           | Adbrix Macros                    |
+| ------------------------- | --------------------- | -------------------------------- |
+| goal_id                   | 이벤트 이름           | {req.evt.event_name}             |
+| transaction_id            | 고유 클릭 ID          | {last.cb_1}                      |
+| google_aid                | ADID                  | {req.common.identity.adid}       |
+| ios_ifa                   | IDFA                  | {req.common.identity.adid}       |
+| conv_ip                   | 전환이 발생한 기기 IP | {last.a_ip}                      |
+| mobile_carrier            | 통신사                | {req.common.device_info.carrier} |
+| device_os_version         | 기기 OS 버전          | {req.common.device_info.os}      |
+| device_brand              | 기기 제조사           | {req.common.device_info.vendor}  |
+| device_model              | 기기 모델명           | {req.common.device_info.model}   |
+| conversion_event_datetime | 이벤트 발생 시간      | {req.evt.event_timestamp}        |
+| adv_sub2                  | 추가 파라미터         | {last.cb_2}                      |
+| adv_sub3                  | 추가 파라미터         | {last.cb_3}                      |
+| adv_sub4                  | 추가 파라미터         | {last.cb_4}                      |
+| adv_sub5                  | 추가 파라미터         | {last.cb_5}                      |
+
+참고 자료
+
+* [https://help.adbrix.io/hc/ko/sections/360001417213-Partner-Integration](https://help.adbrix.io/hc/ko/sections/360001417213-Partner-Integration)
 
